@@ -2,6 +2,7 @@ group 'com.example.scgateway_flutter_plugin'
 version '1.0-SNAPSHOT'
 
 buildscript {
+    ext.kotlin_version = '1.9.20'
     repositories {
         google()
         jcenter()
@@ -49,6 +50,11 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_21
     }
 
 //    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
